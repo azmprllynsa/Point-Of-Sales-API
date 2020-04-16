@@ -13,6 +13,7 @@ module.exports = {
         name: req.body.name,
         email: req.body.email,
         password: bcrypt.hashSync(req.body.password, salt),
+        image: 'photo.jpg',
         role_id: 0,
         status: 0,
       });
