@@ -1,6 +1,6 @@
 
 module.exports = (sequelize, DataTypes) => {
-  const order = sequelize.define('order', {
+  const Order = sequelize.define('Order', {
     invoice: DataTypes.STRING,
     user_id: DataTypes.STRING,
     customer_id: DataTypes.STRING,
@@ -9,18 +9,22 @@ module.exports = (sequelize, DataTypes) => {
     tax_ammount: DataTypes.STRING,
     net_ammount: DataTypes.STRING,
   }, {});
-  order.associate = (models) => {
+  Order.associate = (models) => {
     // associations can be defined here
-    order.belongsTo(models.customer, {
+    Order.belongsTo(models.Customer, {
       foreignKey: 'customer_id',
-      as: 'customerId',
+      as: 'customer',
       sourceKey: 'id',
     });
-    order.belongsTo(models.user, {
+    Order.belongsTo(models.User, {
       foreignKey: 'user_id',
-      as: 'userId',
+      as: 'cashier',
       sourceKey: 'id',
+    });
+    Order.hasMany(models.OrderDetail, {
+      foreignKey: 'order_id',
+      as: 'orderDetail',
     });
   };
-  return order;
+  return Order;
 };

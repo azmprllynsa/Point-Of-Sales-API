@@ -1,6 +1,6 @@
 
 module.exports = (sequelize, DataTypes) => {
-  const customer = sequelize.define('customer', {
+  const Customer = sequelize.define('Customer', {
     name: DataTypes.STRING,
     email: DataTypes.STRING,
   }, {});
@@ -12,5 +12,5 @@ module.exports = (sequelize, DataTypes) => {
   //     sourceKey: 'id',
   //   });
   // };
-  return customer;
+  return Customer;
 };

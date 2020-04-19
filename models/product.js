@@ -1,18 +1,18 @@
 
 module.exports = (sequelize, DataTypes) => {
-  const product = sequelize.define('product', {
+  const Product = sequelize.define('Product', {
     name: DataTypes.STRING,
     price: DataTypes.STRING,
     image: DataTypes.STRING,
     id_category: DataTypes.INTEGER,
   }, {});
-  product.associate = (models) => {
+  Product.associate = (models) => {
     // associations can be defined here
-    product.belongsTo(models.category, {
+    Product.belongsTo(models.Category, {
       foreignKey: 'id_category',
       as: 'productCategory',
       sourceKey: 'id',
     });
   };
-  return product;
+  return Product;
 };
