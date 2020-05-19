@@ -34,7 +34,7 @@
 ## Installation
 ### Clone
 ```
-$ git clone https://github.com/azmprllynsa/api-library.git
+$ git clone https://github.com/azmprllynsa/Point-Of-Sales-API.git
 $ cd api-library
 $ npm install
 ```
@@ -64,43 +64,42 @@ $ npm start
 
 
 ## API Endpoint
-### Book Endpoint
-| No  | HTTP Method | URI                                 | Operation                                  |
-| --- | ----------- | ----------------------------------- | ------------------------------------------ |
-| 1   | GET         | /api/v1/book/                       | Get all books data                         |
-| 2   | GET         | /api/v1/book/:book_id               | Get book’s data by it’s ID                 |
-| 3   | GET         | /api/v1/book/?page=1                | Get book’s data on the 1st page            |
-| 4   | GET         | /api/v1/book/?search=book_title     | Search book data by title keyword          |
-| 5   | GET         | /api/v1/book/?sortBy=title          | Sort book data by the title                |
-| 6   | GET         | /api/v1/book/?sortBy=released_date  | Sort book data by the released date        |
-| 7   | GET         | /api/v1/book/?sortBy=genre          | Sort book data by the genre                |
-| 8   | POST        | /api/v1/book/admin                  | Insert new book data                       |
-| 9   | PATCH       | /api/v1/book/admin/:book_id         | Edit or update the book’s data by it’s ID  |
-| 10  | DELETE      | /api/v1/book/admin/:book_id         | Delete the book by it’s ID                 |
-
 ### User Endpoint
 | No  | HTTP Method | URI                                 | Operation                                  |
 | --- | ----------- | ----------------------------------- | ------------------------------------------ |
 | 1   | GET         | /api/v1/user/                       | Get all users data                         |
-| 2   | GET         | /api/v1/user/admin/:user_id         | Get user’s data by it’s ID                 |
+| 2   | GET         | /api/v1/user/:user_id               | Get user’s data by it’s ID                 |
 | 3   | POST        | /api/v1/user/register               | Register new user                          |
 | 4   | POST        | /api/v1/user/login                  | Login user                                 |
 | 9   | PATCH       | /api/v1/user/:user_id               | Edit or update the user’s data by it’s ID  |
 | 10  | DELETE      | /api/v1/user/:user_id               | Delete the user by it’s ID                 |
 
-### Loan Endpoint
+### Product Endpoint
+| No  | HTTP Method | URI                                  | Operation                                 |
+| --- | ----------- | ------------------------------------ | ----------------------------------------- |
+| 1   | GET         | /api/v1/product/                     | Get all products data                     |
+| 2   | GET         | /api/v1/product/:product_id          | Get product’s data by it’s ID             |
+| 3   | GET         | /api/v1/product/?page=1              | Get product’s data on the 1st page        |
+| 4   | GET         | /api/v1/product/?search=product_title| Search product data by title keyword      |
+| 5   | GET         | /api/v1/product/?sortBy=title        | Sort product data by the title            |
+| 6   | GET         | /api/v1/product/?sortBy=genre        | Sort product data by the category         |
+| 7   | POST        | /api/v1/product/admin                | Insert new product data                   |
+| 8   | PATCH       | /api/v1/product/admin/:product_id    | Update the product’s data by it’s ID      |
+| 9   | DELETE      | /api/v1/product/admin/:product_id    | Delete the product by it’s ID             |
+
+### Order Endpoint
 | No  | HTTP Method | URI                                 | Operation                                  |
 | --- | ----------- | ----------------------------------- | ------------------------------------------ |
-| 1   | GET         | /api/v1/loan/admin                  | Get all loans data                         |
-| 1   | GET         | /api/v1/loan/:user_id               | Get all loans data by user ID              |
-| 2   | GET         | /api/v1/loan/:loan_id               | Get loan’s data by loan ID                 |
-| 9   | POST        | /api/v1/loan/                       | Insert Loan Book By user ID                |
-| 9   | PATCH       | /api/v1/loan/:loan_id               | Edit or update the loan’s data by it’s ID  |
-| 10  | DELETE      | /api/v1/loan/:loan_id               | Delete the loan by it’s ID                 |
+| 1   | GET         | /api/v1/order                       | Get all orders data                        |
+| 1   | GET         | /api/v1/order/:user_id              | Get all orders data by user ID             |
+| 2   | GET         | /api/v1/order/:order_id             | Get order’s data by order ID               |
+| 9   | POST        | /api/v1/order/                      | Insert new order data                      |
+| 9   | PATCH       | /api/v1/order/:order_id             | Edit or update the order’s data by it’s ID |
+| 10  | DELETE      | /api/v1/order/:order_id             | Delete the order by it’s ID                |
 
 
 ## About Project
-It's API made for Online Library Project. It's project made from Node Js and Express Js
+It's API made for Point of Sales Project. It's project made from Node Js and Express Js
 
 ## Contributing
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are greatly appreciated.
