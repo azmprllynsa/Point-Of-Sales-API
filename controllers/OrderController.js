@@ -110,7 +110,12 @@ module.exports = {
             ammount += price;
 
             const taxAmmount = ammount * 0.1;
+            // generate invouce
+            const count = await Order.count();
+            const datetime = new Date().toISOString().slice(0, 10).replace(/-/g, '');
+            const invoice = `#POS${datetime}${count * 7}`;
             const order = await Order.create({
+              invoice,
               user_id: input.user_id,
               customer_id: input.customer_id,
               ammount,
@@ -119,16 +124,6 @@ module.exports = {
             });
             // input order detail
             // eslint-disable-next-line prefer-const
-            let productDetail = [];
-            products.forEach(async (item) => {
-              productDetail.push(
-                await OrderDetail.create({
-                  order_id: order.id,
-                  product_id: item.id,
-                  product_quantity: item.quantity,
-                }),
-              );
-            });
             if (order === undefined) {
               response.status = 400;
               response.message = 'Input Invalid';

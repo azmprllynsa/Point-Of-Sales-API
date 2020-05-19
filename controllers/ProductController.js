@@ -37,8 +37,8 @@ module.exports = {
     try {
       const page = parseInt(req.query.page, 10) || 1;
       const limit = parseInt(req.query.limit, 10) || 9;
-      const path = `http://${req.get('host') + req.baseUrl}?page`;
       const offset = (page * limit) - limit;
+      const path = `http://${req.get('host') + req.baseUrl}?page`;
       const { search } = req.query;
       // eslint-disable-next-line prefer-const
       let param = {};
@@ -69,9 +69,7 @@ module.exports = {
         param.where = where;
         searchParam = { where };
       }
-      console.log(param);
       const data = await Product.findAll(param);
-      console.log('here');
       const count = await Product.count(searchParam);
       pagination = {
         current_page: page,

@@ -1,6 +1,8 @@
 /* eslint-disable no-shadow */
 /* eslint-disable no-const-assign */
+require('dotenv').config();
 const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 const { User } = require('../models');
 const helpers = require('../helpers/response');
 
@@ -46,6 +48,7 @@ module.exports = {
           email,
         },
       });
+      console.log('here');
       if (!data) {
         response.status = 404;
         response.message = 'Email Not Found! Please Register First!';
@@ -66,8 +69,9 @@ module.exports = {
 
           //   helpers.generic(res, response);
         } else {
-          // const token = jwt.sign({ id: data.id, email }, process.env.SECRET_KEY);
-          // data.dataValues.token = token;
+          const token = jwt.sign({ id: data.id, email }, process.env.SECRET_KEY);
+          console.log(token);
+          data.dataValues.token = token;
           response.status = 200;
           response.message = `${email} Login Successfully!`;
           response.data = data;
