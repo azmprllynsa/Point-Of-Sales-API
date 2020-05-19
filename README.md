@@ -1,10 +1,10 @@
-<h2 align="center">Library API</h2>
+<h2 align="center">Point of Sales API</h2>
 
 [![Node JS](https://img.shields.io/badge/Dependencies-Express%20JS-green)](https://nodejs.org/en/)
-![GitHub repo size](https://img.shields.io/github/repo-size/azmprllynsa/api-library)
-![GitHub contributors](https://img.shields.io/github/contributors/azmprllynsa/api-library)
-![GitHub stars](https://img.shields.io/github/stars/azmprllynsa/api-library?style=social)
-![GitHub forks](https://img.shields.io/github/forks/azmprllynsa/api-library?style=social)
+![GitHub repo size](https://img.shields.io/github/repo-size/azmprllynsa/Point-Of-Sales-API)
+![GitHub contributors](https://img.shields.io/github/contributors/azmprllynsa/Point-Of-Sales-API)
+![GitHub stars](https://img.shields.io/github/stars/azmprllynsa/Point-Of-Sales-API?style=social)
+![GitHub forks](https://img.shields.io/github/forks/azmprllynsa/Point-Of-Sales-API?style=social)
 
 <p align="center" >
   <a href="https://nodejs.org/">
