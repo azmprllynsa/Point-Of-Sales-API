@@ -111,7 +111,7 @@ Fork the Project
 4. Open a Pull Request
 
 ## Related Project
-[`Point of Sales Front End`](https://github.com/azmprllynsa/Point-of-Sales-VueJS)
+[`Point of Sales Frontend`](https://github.com/azmprllynsa/Point-of-Sales-VueJS)
 
 
 ## Contact
