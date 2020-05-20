@@ -35,7 +35,7 @@
 ### Clone
 ```
 $ git clone https://github.com/azmprllynsa/Point-Of-Sales-API.git
-$ cd api-library
+$ cd Point-Of-Sales-API
 $ npm install
 ```
 
