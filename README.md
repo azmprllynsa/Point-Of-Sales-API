@@ -60,7 +60,7 @@ $ npm start
 ```
 
 ## Postman Collection
-[Click Here](https://www.getpostman.com/collections/fc001183ae45c207af2a)
+[Click Here](https://www.getpostman.com/collections/4b3fb154ec8726baa569)
 
 
 ## API Endpoint
@@ -111,7 +111,7 @@ Fork the Project
 4. Open a Pull Request
 
 ## Related Project
-[Library-Frontend](https://github.com/azmprllynsa/Library-Vuejs)
+[`Point of Sales Front End`](https://github.com/azmprllynsa/Point-of-Sales-VueJS)
 
 
 ## Contact
